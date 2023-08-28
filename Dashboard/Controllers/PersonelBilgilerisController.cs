@@ -20,6 +20,10 @@ namespace Dashboard.Controllers
         {
             return View(db.PersonelBilgileris.ToList());
         }
+        public ActionResult PersonelKart()
+        {
+            return View(db.PersonelBilgileris.ToList());
+        }
 
         // GET: PersonelBilgileris/Details/5
         public ActionResult Details(int? id)

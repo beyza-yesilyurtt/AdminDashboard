@@ -24,7 +24,6 @@
                     <div class="row">
                         <div class="mb-3 col-md-6">
                             @Html.LabelFor(model => model.İsim, htmlAttributes: new { @class = "control-label col-md-6" })
-
                             <div class="input-group input-group-merge">
                                 <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
                                 <input class="form-control" type="text" id="İsim" name="İsim" value="" autofocus="">
@@ -37,10 +36,13 @@
                                 <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
                                 <input class="form-control" type="text" id="Soyisim" name="Soyisim" value="" autofocus="">
                             </div>
+                            <div class="mb-3 col-md-6">
+                                @Html.LabelFor(model => model.PersonelResim, htmlAttributes: new { @class = "control-label col-md-6" })
+                                <input class="form-control" type="text" name="PersonelResim" id="PersonelResim" value="">
+                            </div>
 
                         </div>
                         <div class="mb-3 col-md-6">
-
                             @Html.LabelFor(model => model.Mail, htmlAttributes: new { @class = "control-label col-md-6" })
                             <input class="form-control" type="email" id="Mail" name="Mail" value="" placeholder="john.doe@example.com">
                         </div>
@@ -112,25 +114,26 @@
                             @Html.LabelFor(model => model.PozisyonAcıklama, htmlAttributes: new { @class = "control-label col-md-6" })
                             <input class="form-control" type="text" name="PozisyonAcıklama" id="PozisyonAcıklama" value="">
                         </div>
-
                     </div>
-                    <div class="mt-2">
-                        <button type="submit" class="btn btn-primary me-2">Personel Oluştur</button>
-                        <a href="/PersonelBilgileris/Index/" class="btn btn-outline-secondary">Ana Sayfaya Dön</a>
-                    </div>
-                </form>
+           
+            <div class="mt-2">
+                <button type="submit" class="btn btn-primary me-2">Personel Ekle</button>
+                <a href="/PersonelBilgileris/Index/" class="btn btn-outline-secondary">Ana Sayfaya Dön</a>
             </div>
-            <!-- /Account -->
+            </form>
         </div>
+        <!-- /Account -->
+    </div>
+    </div>
+}
 
-
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+    @*<div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
             </div>
-        </div>
-    </div>}
+        </div>}*@
+
 
 
 

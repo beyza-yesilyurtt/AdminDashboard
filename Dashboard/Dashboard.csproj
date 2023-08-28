@@ -433,6 +433,7 @@
     <Content Include="Views\PersonelBilgileris\Details.cshtml" />
     <Content Include="Views\PersonelBilgileris\Edit.cshtml" />
     <Content Include="Views\PersonelBilgileris\Index.cshtml" />
+    <Content Include="Views\PersonelBilgileris\PersonelKart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -18,12 +18,21 @@
         <table id="personelListele" class="table">
             <thead>
                 <tr>
+
                     <th>
-                        @Html.DisplayNameFor(model => model.Mail)
+                        E-POSTA
                     </th>
+
+                    <th>
+                        PERSONEL RESİM
+                    </th>
+
                     @*<th>
-                            @Html.DisplayNameFor(model => model.Sifre)
-                        </th> *@
+            @Html.DisplayNameFor(model => model.Mail)
+        </th>*@
+                    @*<th>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </th> *@
                     <th>
                         @Html.DisplayNameFor(model => model.Yetki)
                     </th>
@@ -53,6 +62,7 @@
                         @Html.DisplayNameFor(model => model.PozisyonAcıklama)
                     </th>
 
+
                 </tr>
             </thead>
 
@@ -60,49 +70,54 @@
 
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td>
-                            <a href="mailto:@item.Mail">@item.Mail</a>
-                        </td>
+                <tr>
+                    <td>
+                        <a href="mailto:@item.Mail">@item.Mail</a>
+                    </td>
 
-                        @* <td>
-                                @Html.DisplayFor(modelItem => item.Sifre)
-                            </td>*@
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Yetki)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.İsim)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Soyisim)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.TCND)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Departman)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Görev)
-                        </td>
+                    <td>                  
+                        <img src="@item.PersonelResim" style="height: 50px; width: 50px; border-radius: 50%; overflow: hidden;" />                  
+                    </td>
 
-                        <td>
-                            <a href="telno:@item.TelefonNumarası">@item.TelefonNumarası</a>
+                    @* <td>
+            @Html.DisplayFor(modelItem => item.Sifre)
+        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Yetki)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.İsim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Soyisim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TCND)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Departman)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Görev)
+                    </td>
 
-                        </td>
+                    <td>
+                        <a href="telno:@item.TelefonNumarası">@item.TelefonNumarası</a>
 
-                        <td>
-                            <a href="/PersonelBilgileris/Edit/@item.PersonelBilgiId" class="btn btn-primary"><span class="tf-icons bx bx-edit"></span></a>
-                            <a href="/PersonelBilgileris/Details/@item.PersonelBilgiId" class="btn btn-secondary"><span class="tf-icons bx bx-detail"></span></a>
-                            <a href="/PersonelBilgileris/Delete/@item.PersonelBilgiId" class="btn btn-danger"><span class="tf-icons bx bx-trash"></span></a>
-                            @* <a href="/PersonelBilgileris/HareketFöyü/@item.PersonelBilgiId" class="btn btn-info"><span class="tf-icons bx bx-history"></span></a> *@
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.PozisyonAcıklama)
-                        </td>
+                    </td>
 
-                    </tr>
+                    <td>
+                        <a href="/PersonelBilgileris/Edit/@item.PersonelBilgiId" class="btn btn-primary"><span class="tf-icons bx bx-edit"></span></a>
+                        <a href="/PersonelBilgileris/Details/@item.PersonelBilgiId" class="btn btn-secondary"><span class="tf-icons bx bx-detail"></span></a>
+                        <a href="/PersonelBilgileris/Delete/@item.PersonelBilgiId" class="btn btn-danger"><span class="tf-icons bx bx-trash"></span></a>
+                        @* <a href="/PersonelBilgileris/HareketFöyü/@item.PersonelBilgiId" class="btn btn-info"><span class="tf-icons bx bx-history"></span></a> *@
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PozisyonAcıklama)
+                    </td>
+
+
+                </tr>
                 }
 
             </tbody>

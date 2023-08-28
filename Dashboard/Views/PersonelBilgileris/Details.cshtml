@@ -10,7 +10,7 @@
     <div class="col-md-12">
 
         <div class="card mb-4">
-            <h5 class="card-header">Profile Detayları</h5>
+            <h5 class="card-header">Profil Detayları</h5>
             <!-- Account -->
 
             <hr class="my-0">
@@ -18,72 +18,74 @@
                 <form id="formAccountSettings" method="POST" onsubmit="return false">
                     <div class="row">
                         <div class="mb-3 col-md-6">
-
-                            <label for="firstName" class="form-label">İSİM</label>
-                            @Html.DisplayNameFor(model => model.İsim)
-
+                            <label for="lastName" class="form-label">İSİM:</label>
+                            @Model.İsim
                         </div>
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">SOYİSİM</label>
-                            @Html.DisplayNameFor(model => model.Soyisim)
+                            <label for="lastName" class="form-label">SOYİSİM:</label>
+                            @Model.Soyisim
                         </div>
-
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">DEPARTMAN</label>
-                            @Html.DisplayNameFor(model => model.Departman)
+                            <label for="lastName" class="form-label">PERSONEL RESİM:</label>
+                            @Model.PersonelResim
                         </div>
 
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">GÖREV</label>
-                            @Html.DisplayNameFor(model => model.Görev)
+                            <label for="lastName" class="form-label">DEPARTMAN:</label>
+                            @Model.Departman
                         </div>
 
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">E-POSTA</label>
-                            @Html.DisplayNameFor(model => model.Mail)
+                            <label for="lastName" class="form-label">GÖREV:</label>
+                            @Model.Görev
                         </div>
 
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">TELEFON NUMARASI</label>
-                            @Html.DisplayNameFor(model => model.TelefonNumarası)
+                            <label for="lastName" class="form-label">E-POSTA:</label>
+                            @Model.Mail
                         </div>
 
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">YETKİ</label>
-                            @Html.DisplayNameFor(model => model.Yetki)
+                            <label for="lastName" class="form-label">TELEFON NUMARASI:</label>
+                            @Model.TelefonNumarası
                         </div>
 
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">TC KİMLİK NUMARASI</label>
-                            @Html.DisplayNameFor(model => model.TCND)
+                            <label for="lastName" class="form-label">YETKİ:</label>
+                            @Model.Yetki
                         </div>
 
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">DOĞUM TARİHİ</label>
-                            @Html.DisplayNameFor(model => model.DogumTarihi)
+                            <label for="lastName" class="form-label">TC KİMLİK NUMARASI:</label>
+                            @Model.TCND
                         </div>
 
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">ADRES </label>
-                            @Html.DisplayNameFor(model => model.AdresBilgi)
+                            <label for="lastName" class="form-label">DOĞUM TARİHİ:</label>
+                            @Model.DogumTarihi
                         </div>
 
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">İŞE GİRİŞ TARİHİ </label>
-                            @Html.DisplayNameFor(model => model.IseBaslamaTarihi)
+                            <label for="lastName" class="form-label">ADRES: </label>
+                            @Model.AdresBilgi
                         </div>
 
                         <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">GÖREV AÇIKLAMASI </label>
-                            @Html.DisplayNameFor(model => model.PozisyonAcıklama)
+                            <label for="lastName" class="form-label">İŞE GİRİŞ TARİHİ: </label>
+                            @Model.IseBaslamaTarihi
                         </div>
 
-                    </div>
-                    <div class="mt-2">
-                        <a href="/PersonelBilgileris/Index/" type="submit" class="btn btn-primary me-2">Ana Sayfaya Dön</a>
+                        <div class="mb-3 col-md-6">
+                            <label for="lastName" class="form-label">GÖREV AÇIKLAMASI: </label>
+                            @Model.PozisyonAcıklama
+                        </div>
 
-                    </div>
-                </form>
+                        </div>
+                        <div class="mt-2">
+                            <a href="/PersonelBilgileris/Index/" type="submit" class="btn btn-primary me-2">Ana Sayfaya Dön</a>
+                            
+                        </div>
+</form>
             </div>
             <!-- /Account -->
         </div>

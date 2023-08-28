@@ -19,4 +19,6 @@ namespace Dashboard.Models.DataContext
             public DbSet<PersonelProje> PersonelProjeleris { get; set; }
 
         }
-    }
+
+    
+}
