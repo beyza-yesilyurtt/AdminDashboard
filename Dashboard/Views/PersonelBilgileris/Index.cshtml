@@ -1,0 +1,150 @@
+﻿@model IEnumerable<Dashboard.Models.Personel.PersonelBilgileri>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-html5-1.3.1/b-print-1.3.1/r-2.1.1/rg-1.0.0/datatables.min.css" />
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-html5-1.3.1/b-print-1.3.1/r-2.1.1/rg-1.0.0/datatables.min.js"></script>
+
+<h2>Personel Listesi</h2>
+
+<div class="card">
+
+    <div class="card-body">
+
+        <table id="personelListele" class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Mail)
+                    </th>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.Sifre)
+                        </th> *@
+                    <th>
+                        @Html.DisplayNameFor(model => model.Yetki)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.İsim)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Soyisim)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TCND)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Departman)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Görev)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.TelefonNumarası)
+                    </th>
+
+
+                    <th>AKSİYON</th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PozisyonAcıklama)
+                    </th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <a href="mailto:@item.Mail">@item.Mail</a>
+                        </td>
+
+                        @* <td>
+                                @Html.DisplayFor(modelItem => item.Sifre)
+                            </td>*@
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Yetki)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.İsim)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Soyisim)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TCND)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Departman)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Görev)
+                        </td>
+
+                        <td>
+                            <a href="telno:@item.TelefonNumarası">@item.TelefonNumarası</a>
+
+                        </td>
+
+                        <td>
+                            <a href="/PersonelBilgileris/Edit/@item.PersonelBilgiId" class="btn btn-primary"><span class="tf-icons bx bx-edit"></span></a>
+                            <a href="/PersonelBilgileris/Details/@item.PersonelBilgiId" class="btn btn-secondary"><span class="tf-icons bx bx-detail"></span></a>
+                            <a href="/PersonelBilgileris/Delete/@item.PersonelBilgiId" class="btn btn-danger"><span class="tf-icons bx bx-trash"></span></a>
+                            @* <a href="/PersonelBilgileris/HareketFöyü/@item.PersonelBilgiId" class="btn btn-info"><span class="tf-icons bx bx-history"></span></a> *@
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PozisyonAcıklama)
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+
+        </table>
+
+
+    </div>
+</div>
+
+<script>
+    $('#personelListele').DataTable({
+        language: {
+            info: "_TOTAL_ kayıttan _START_ - _END_ kayıt gösteriliyor.",
+            infoEmpty: "Gösterilecek hiç kayıt yok.",
+            loadingRecords: "Kayıtlar yükleniyor.",
+            zeroRecords: "Tablo boş",
+            search: "Arama:",
+            infoFiltered: "(toplam _MAX_ kayıttan filtrelenenler)",
+            buttons: {
+                copyTitle: "Panoya kopyalandı.",
+                copySuccess: "Panoya %d satır kopyalandı",
+                copy: "Kopyala",
+                print: "Yazdır",
+            },
+
+            paginate: {
+                first: "İlk",
+                previous: "Önceki",
+                next: "Sonraki",
+                last: "Son"
+            },
+        },
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'excel', 'pdf', 'print'
+        ],
+        responsive: true
+    });
+</script>
+
+
+
+
