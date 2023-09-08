@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Dashboard.Models.Urunler.UrunBilgi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-html5-1.3.1/b-print-1.3.1/r-2.1.1/rg-1.0.0/datatables.min.css" />
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-html5-1.3.1/b-print-1.3.1/r-2.1.1/rg-1.0.0/datatables.min.js"></script>
+
+
+<div class="card">
+    <h3 class="card-header" style="color:black;">PERSONEL LİSTESİ</h3>
+    <div class="table-responsive text-nowrap">
+        <table class="table" style="background-color: #34465c; color: white; ">
+            <thead>
+                <tr>
+                   
+                    <th style="color: white;">
+                        @Html.DisplayNameFor(model => model.UrunIsim)
+                    </th>
+                    <th style="color: white;">
+                        @Html.DisplayNameFor(model => model.UrunAciklama)
+                    </th>
+                    <th style="color: white;">
+                        @Html.DisplayNameFor(model => model.UrunFiyat)
+                    </th>
+                    <th style="color: white;">
+                        @Html.DisplayNameFor(model => model.SatılanAdet)
+                    </th>
+                
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                       
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UrunIsim)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UrunAciklama)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UrunFiyat)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SatılanAdet)
+                        </td>                                          
+
+                        <td>
+                            <a href="/PersonelBilgileris/Edit/@item.UrunBilgiId" class="btn btn-primary"><span class="tf-icons bx bx-edit"></span></a>
+                            <a href="/PersonelBilgileris/Details/@item.UrunBilgiId" class="btn btn-secondary"><span class="tf-icons bx bx-detail"></span></a>
+                            <a href="/PersonelBilgileris/Delete/@item.UrunBilgiId" class="btn btn-danger"><span class="tf-icons bx bx-trash"></span></a>
+                            @* <a href="/PersonelBilgileris/HareketFöyü/@item.PersonelBilgiId" class="btn btn-info"><span class="tf-icons bx bx-history"></span></a> *@
+                        </td>
+
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $('#personelListele').DataTable({
+        language: {
+            info: "_TOTAL_ kayıttan _START_ - _END_ kayıt gösteriliyor.",
+            infoEmpty: "Gösterilecek hiç kayıt yok.",
+            loadingRecords: "Kayıtlar yükleniyor.",
+            zeroRecords: "Tablo boş",
+            search: "Arama:",
+            infoFiltered: "(toplam _MAX_ kayıttan filtrelenenler)",
+            buttons: {
+                copyTitle: "Panoya kopyalandı.",
+                copySuccess: "Panoya %d satır kopyalandı",
+                copy: "Kopyala",
+                print: "Yazdır",
+            },
+
+            paginate: {
+                first: "İlk",
+                previous: "Önceki",
+                next: "Sonraki",
+                last: "Son"
+            },
+        },
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'excel', 'pdf', 'print'
+        ],
+        responsive: true
+    });
+</script>

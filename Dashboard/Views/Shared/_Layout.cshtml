@@ -54,7 +54,7 @@
         <div class="layout-container">
             <!-- Menu -->
 
-            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+            <aside id="layout-menu"  class="layout-menu menu-vertical menu" style="background-color: #34465c; color: white; ">
                 <div class="app-brand demo">
                     <a href="index.html" class="app-brand-link">
                         <span class="app-brand-logo demo">
@@ -139,7 +139,8 @@
 
                         <style>
                             .capitalize {
-                                text-transform: uppercase;
+                             
+                                color:lightskyblue;
                             }
                         </style>
 
@@ -155,7 +156,7 @@
                 <ul class="menu-inner py-1">
                     <!-- Dashboard -->
                     <li class="menu-item active">
-                        <a href="index.html" class="menu-link">
+                        <a href="/GenelBakis/Index/" class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Genel Bakış</div>
                         </a>
@@ -163,7 +164,7 @@
 
                     <!-- Layouts -->
                     <li class="menu-item">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-layout"></i>
                             <div data-i18n="Layouts">İstatistikler</div>
                         </a>
@@ -173,39 +174,39 @@
                         <span class="menu-header-text">Personeller</span>
                     </li>
                     <li class="menu-item">
-                        <a href="/PersonelBilgileris/Index/" class="menu-link ">
+                        <a href="/PersonelBilgileris/Index/" class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-dock-top"></i>
                             <div data-i18n="Account Settings">Personel Listele</div>
                         </a>
 
                     </li>
                     <li class="menu-item">
-                        <a href="/PersonelBilgileris/Create/" class="menu-link">
+                        <a href="/PersonelBilgileris/Create/" class="menu-link" style="color:white;" >
                             <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
                             <div data-i18n="Authentications">Personel Ekle</div>
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="/PersonelBilgileris/PersonelKart/" class="menu-link">
+                        <a href="/PersonelBilgileris/PersonelKart/" class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-cube-alt"></i>
                             <div data-i18n="Misc">Personel İletişim</div>
                         </a>
 
                     </li>
 
-                    <li class="menu-item">
-                        <a href="cards-basic.html" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Personel Hareketleri</div>
-                        </a>
-                    </li>
+                    @*<li class="menu-item">
+            <a href="cards-basic.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Personel Hareketleri</div>
+            </a>
+        </li>*@
 
                     <!-- Components -->
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">PROJELER</span></li>
                     <!-- Cards -->
                     <!-- User interface -->
                     <li class="menu-item">
-                        <a href="/PersonelProjes/Index/" class="menu-link">
+                        <a href="/PersonelProje/Index/" class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-box"></i>
                             <div data-i18n="User interface">Proje Listele</div>
                         </a>
@@ -214,36 +215,75 @@
 
                     <!-- Extended components -->
                     <li class="menu-item">
-                        <a href="/PersonelProjes/Create/" class="menu-link">
+                        <a href="/PersonelProje/Create/" class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-copy"></i>
-                            <div data-i18n="Extended UI">Proje Atama</div>
+                            <div data-i18n="Extended UI">Proje Oluştur</div>
                         </a>
 
                     </li>
 
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">ÜRÜNLER</span></li>
+                    <li class="menu-item">
+                        <a href="/UrunBilgis/Index/" class="menu-link" style="color:white;">
+                            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                            <div data-i18n="Account Settings">Ürün Listele</div>
+                        </a>
+
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="/UrunBilgis/Create/" class="menu-link" style="color:white;">
+                            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                            <div data-i18n="Account Settings">Ürün Ekle</div>
+                        </a>
+
+                    </li>
+                    <li class="menu-header small text-uppercase"><span class="menu-header-text">MÜŞTERİLER</span></li>
+
+                    <li class="menu-item">
+                        <a href="/MusteriBilgis/Index/" class="menu-link" style="color:white;">
+                            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                            <div data-i18n="Account Settings">Müşteri Listele</div>
+                        </a>
+
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="/MusteriBilgis/Create/" class="menu-link" style="color:white;">
+                            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                            <div data-i18n="Account Settings">Müşteri Ekle</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="/MusteriBilgis/MusteriKart/" class="menu-link" style="color:white;">
+                            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                            <div data-i18n="Account Settings">Müşteri İletişim</div>
+                        </a>
+                    </li>
 
                     <!-- Forms & Tables -->
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">RAPORLAMALAR</span></li>
                     <!-- Forms -->
                     <li class="menu-item">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-detail"></i>
                             <div data-i18n="Form Elements">Proje Raporları</div>
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-detail"></i>
                             <div data-i18n="Form Layouts">Form Layouts</div>
                         </a>
                         <ul class="menu-sub">
                             <li class="menu-item">
-                                <a href="form-layouts-vertical.html" class="menu-link">
+                                <a href="form-layouts-vertical.html" class="menu-link" style="color:white;">
                                     <div data-i18n="Vertical Form">Vertical Form</div>
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="form-layouts-horizontal.html" class="menu-link">
+                                <a href="form-layouts-horizontal.html" class="menu-link" style="color:white;">
                                     <div data-i18n="Horizontal Form">Horizontal Form</div>
                                 </a>
                             </li>
@@ -255,7 +295,7 @@
                     <li class="menu-item">
                         <a href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
                            target="_blank"
-                           class="menu-link">
+                           class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-support"></i>
                             <div data-i18n="Support">Canlı Destek</div>
                         </a>

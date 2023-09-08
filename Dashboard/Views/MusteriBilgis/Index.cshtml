@@ -1,0 +1,130 @@
+﻿@model IEnumerable<Dashboard.Models.Müşteri.MusteriBilgi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MÜŞTERİ LİSTESİ</h2>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-html5-1.3.1/b-print-1.3.1/r-2.1.1/rg-1.0.0/datatables.min.css" />
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/jq-2.2.4/jszip-3.1.3/pdfmake-0.1.27/dt-1.10.15/b-1.3.1/b-html5-1.3.1/b-print-1.3.1/r-2.1.1/rg-1.0.0/datatables.min.js"></script>
+
+
+<div class="card">
+
+    <div class="card-body">
+
+        <table id="müsteriListele" class="table">
+            <thead>
+                <tr>
+
+                    <th>
+                        E-POSTA
+                    </th>
+
+                    @*<th>
+            @Html.DisplayNameFor(model => model.Mail)
+        </th>*@
+                    @*<th>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </th> *@
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.MusteriIsim)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MusteriSoyisim)
+                    </th>
+                 
+                    <th>
+                        @Html.DisplayNameFor(model => model.MusteriIletisim)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.SirketIsmi)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.SatılanUrun)
+                    </th>
+
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <a href="mailto:@item.MusteriMail">@item.MusteriMail</a>
+                        </td>
+                                           
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MusteriIsim)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MusteriSoyisim)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MusteriIletisim)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SirketIsmi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SatılanUrun)
+                        </td>                       
+
+                        <td>
+                            <a href="/MusteriBilgis/Edit/@item.MusteriBilgiId" class="btn btn-primary"><span class="tf-icons bx bx-edit"></span></a>
+                            <a href="/MusteriBilgis/Details/@item.MusteriBilgiId" class="btn btn-secondary"><span class="tf-icons bx bx-detail"></span></a>
+                            <a href="/MusteriBilgis/Delete/@item.MusteriBilgiId" class="btn btn-danger"><span class="tf-icons bx bx-trash"></span></a>
+                            @* <a href="/PersonelBilgileris/HareketFöyü/@item.PersonelBilgiId" class="btn btn-info"><span class="tf-icons bx bx-history"></span></a> *@
+                        </td>
+                       
+                    </tr>
+                }
+
+            </tbody>
+
+
+        </table>
+
+
+    </div>
+</div>
+
+<script>
+    $('#personelListele').DataTable({
+        language: {
+            info: "_TOTAL_ kayıttan _START_ - _END_ kayıt gösteriliyor.",
+            infoEmpty: "Gösterilecek hiç kayıt yok.",
+            loadingRecords: "Kayıtlar yükleniyor.",
+            zeroRecords: "Tablo boş",
+            search: "Arama:",
+            infoFiltered: "(toplam _MAX_ kayıttan filtrelenenler)",
+            buttons: {
+                copyTitle: "Panoya kopyalandı.",
+                copySuccess: "Panoya %d satır kopyalandı",
+                copy: "Kopyala",
+                print: "Yazdır",
+            },
+
+            paginate: {
+                first: "İlk",
+                previous: "Önceki",
+                next: "Sonraki",
+                last: "Son"
+            },
+        },
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'excel', 'pdf', 'print'
+        ],
+        responsive: true
+    });
+</script>

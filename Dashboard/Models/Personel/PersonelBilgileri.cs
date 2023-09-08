@@ -68,5 +68,7 @@ namespace Dashboard.Models.Personel
         [DisplayName("İŞE BAŞLAMA TARİHİ")]
         public DateTime IseBaslamaTarihi { get; set; } //işe giriş tarihi
         public virtual ICollection<PersonelProje> PersonelProjes { get; set; }
+      
+
     }
 }

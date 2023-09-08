@@ -1,0 +1,91 @@
+﻿@model Dashboard.Models.Müşteri.MusteriBilgi
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Müşteri Düzenle</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.MusteriBilgiId)
+        <div class="card mb-4">
+
+
+            <hr class="my-0">
+            <div class="card-body">
+                <form id="formAccountSettings" method="POST" onsubmit="return false">
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.MusteriIsim, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <input class="form-control" type="text" id="MusteriIsim" name="MusteriIsim" autofocus="" value="@Model.MusteriIsim">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.MusteriSoyisim, htmlAttributes: new { @class = "control-label col-md-6" })
+
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
+
+                                <input class="form-control" type="text" id="MusteriSoyisim" name="MusteriSoyisim" autofocus="" value="@Model.MusteriSoyisim">
+                            </div>
+
+                            <div class="mb-3 col-md-6">
+                                @Html.LabelFor(model => model.MusteriMail, htmlAttributes: new { @class = "control-label col-md-6" })
+                                <div class="input-group input-group-merge">
+                                    <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                                    <input class="form-control" type="email" name="MusteriMail" id="MusteriMail" value="@Model.MusteriMail">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 col-md-6">
+                                @Html.LabelFor(model => model.MusteriIletisim, htmlAttributes: new { @class = "control-label col-md-6" })
+                                <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-phone2" class="input-group-text"><i class="bx bx-phone"></i></span>
+                                    <input class="form-control" type="text" name="MusteriIletisim" id="MusteriIletisim" value="@Model.MusteriIletisim">
+
+                                </div>
+
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                @Html.LabelFor(model => model.SirketIsmi, htmlAttributes: new { @class = "control-label col-md-6" })
+                                <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-company2" class="input-group-text"><i class="bx bx-map"></i></span>
+                                    <input class="form-control" type="text" name="SirketIsmi" id="SirketIsmi" value="@Model.SirketIsmi">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3 col-md-6">
+                                @Html.LabelFor(model => model.SatılanUrun, htmlAttributes: new { @class = "control-label col-md-6" })
+                                <div class="input-group input-group-merge">
+                                    <span id="basic-icon-default-company2" class="input-group-text"><i class="bx bx-map"></i></span>
+                                    <input class="form-control" type="text" name="SatılanUrun" id="SatılanUrun" value="@Model.SatılanUrun">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-primary me-2">Müşteri Düzenle</button>
+                        <a href="/MusteriBilgis/Index/" class="btn btn-outline-secondary">Anasayfaya Dön</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+}

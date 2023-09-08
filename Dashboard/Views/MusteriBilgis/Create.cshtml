@@ -1,0 +1,77 @@
+﻿@model Dashboard.Models.Müşteri.MusteriBilgi
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="card mb-4">
+            <h5 class="card-header">Müşteri Ekle</h5>
+
+            <hr class="my-0">
+            <div class="card-body">
+                <form id="formAccountSettings" method="POST" onsubmit="return false">
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.MusteriIsim, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <input class="form-control" type="text" id="MusteriIsim" name="MusteriIsim" value="" autofocus="">
+                            </div>
+
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.MusteriSoyisim, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <input class="form-control" type="text" id="MusteriSoyisim" name="MusteriSoyisim" value="" autofocus="">
+                            </div>
+
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.MusteriMail, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <input class="form-control" type="email" id="MusteriMail" name="MusteriMail" value="" placeholder="john.doe@example.com">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.MusteriIletisim, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text">TR (+90)</span>
+                                <input type="text" id="MusteriIletisim" name="MusteriIletisim" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.SirketIsmi, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <input class="form-control" type="text" name="SirketIsmi" id="Sirketİsmi" value="">
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.SatılanUrun, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <select name="Satılan" class="form-control" required>
+                                <option value="Seçiniz">Seçiniz</option>
+                                <option value="YDC">YDC</option>
+                                <option value="Genvizit">Genvizit</option>
+                                <option value="E-Gen">E-Gen</option>
+                                <option value="İs-Gen">İs-Gen</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-primary me-2">Müşteri Ekle</button>
+                        <a href="/MusteriBilgis/Index/" class="btn btn-outline-secondary">Ana Sayfaya Dön</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+}

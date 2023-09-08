@@ -15,7 +15,7 @@ namespace Dashboard.Controllers
     {
         private DashboardDbContext db = new DashboardDbContext();
 
-        // GET: PersonelBilgileris
+       
         public ActionResult Index()
         {
             return View(db.PersonelBilgileris.ToList());
@@ -25,7 +25,7 @@ namespace Dashboard.Controllers
             return View(db.PersonelBilgileris.ToList());
         }
 
-        // GET: PersonelBilgileris/Details/5
+      
         public ActionResult Details(int? id)
         {
             if (id == null)

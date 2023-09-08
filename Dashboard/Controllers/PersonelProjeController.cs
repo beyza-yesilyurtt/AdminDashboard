@@ -13,8 +13,8 @@ namespace Dashboard.Controllers
         private DashboardDbContext db = new DashboardDbContext();
         public ActionResult Index()
         {
-            var projeListele = db.PersonelProjeleris.ToList();
-            return View(projeListele);
+            var projeobj = db.PersonelProjes.ToList();
+            return View(projeobj);
         }
 
         public ActionResult Create()
@@ -24,14 +24,41 @@ namespace Dashboard.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(PersonelProje personelProje, int[] PersonelBilgiId)
+        public ActionResult Create(PersonelProje projeobj, int[] PersonelBilgiId)
         {
             foreach(var x in PersonelBilgiId)
             {
-                personelProje.PersonelBilgileris.Add(db.PersonelBilgileris.Find(x));
+                projeobj.PersonelBilgileris.Add(db.PersonelBilgileris.Find(x));
             }
-            personelProje.ProjeBaslangıcTarihi = DateTime.Now;
-            db.PersonelProjeleris.Add(personelProje);
+            projeobj.ProjeBaslangıcTarihi = DateTime.Now;
+            db.PersonelProjes.Add(projeobj);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var projeobj = db.PersonelProjes.Find(id);
+            return View(projeobj);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(PersonelProje projeobj)
+        {
+            var personelProje1 = db.PersonelProjes.Find(projeobj.PersonelProjeId);
+            personelProje1.ProjeAcıklama = projeobj.ProjeAcıklama;
+            personelProje1.ProjeIsim = projeobj.ProjeIsim;
+            personelProje1.TamamlanmaOranı = projeobj.TamamlanmaOranı;
+            personelProje1.PriorityStatus = projeobj.PriorityStatus;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Tamamla(int id)
+        {
+            var projeobj = db.PersonelProjes.Find(id);
+            projeobj.ProjeDurumu = true;
+            projeobj.TamamlanmaOranı = 100;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

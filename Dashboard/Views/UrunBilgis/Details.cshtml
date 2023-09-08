@@ -1,0 +1,59 @@
+﻿@model Dashboard.Models.Urunler.UrunBilgi
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UrunBilgi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunIsim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunIsim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunAciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunAciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrunFiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrunFiyat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SatınAlanMüşteri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SatınAlanMüşteri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.İletişimeGecenKisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İletişimeGecenKisi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UrunBilgiId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,61 @@
+﻿@model Dashboard.Models.Urunler.UrunBilgi
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" style="background-color: #34465c;">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="card mb-4" style="background-color: #34465c; color:white;">
+            <h3 class="card-header" style="color:white;">Ürün Ekle</h3>
+
+            <hr class="my-0">
+            <div class="card-body" style="background-color: #34465c; color:white;">
+                <form id="formAccountSettings" method="POST" onsubmit="return false" style="color:black;">
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.UrunIsim, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <input class="form-control" type="text" id="UrunIsim" name="UrunIsim" value="" autofocus="">
+                            </div>
+
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.UrunAciklama, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
+                                <input class="form-control" type="text" id="UrunAciklama" name="UrunAciklama" value="" autofocus="">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                @Html.LabelFor(model => model.UrunFiyat, htmlAttributes: new { @class = "control-label col-md-6" })
+                                <input class="form-control" type="text" name="UrunFiyat" id="UrunFiyat" value="">
+                            </div>
+                        </div>
+                      
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.SatılanAdet, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <input class="form-control" type="text" name="SatılanAdet" id="SatılanAdet" value="">
+                        </div>
+                       
+                    </div>
+
+                    <div class="mt-2">
+                        <button type="submit" class="btn btn-primary me-2">Ürün Ekle</button>
+                        <a href="/UrunBilgis/Index/" class="btn btn-outline-secondary">Ana Sayfaya Dön</a>
+                    </div>
+                </form>
+            </div>
+            <!-- /Account -->
+        </div>
+    </div>
+}

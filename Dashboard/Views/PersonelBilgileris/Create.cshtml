@@ -11,16 +11,16 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
+    <div class="form-horizontal" style="background-color: #34465c;">
 
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-        <div class="card mb-4">
-            <h5 class="card-header">Personel Ekle</h5>
+        <div class="card mb-4" style="background-color: #34465c; color:white;">
+            <h3 class="card-header" style="color:white;">Personel Ekle</h3>
 
             <hr class="my-0">
-            <div class="card-body">
-                <form id="formAccountSettings" method="POST" onsubmit="return false">
+            <div class="card-body" style="background-color: #34465c; color:white;">
+                <form id="formAccountSettings" method="POST" onsubmit="return false" style="color:black;">
                     <div class="row">
                         <div class="mb-3 col-md-6">
                             @Html.LabelFor(model => model.İsim, htmlAttributes: new { @class = "control-label col-md-6" })

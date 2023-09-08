@@ -126,16 +126,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GenelBakisController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MusteriBilgisController.cs" />
     <Compile Include="Controllers\PersonelBilgilerisController.cs" />
     <Compile Include="Controllers\PersonelProjeController.cs" />
+    <Compile Include="Controllers\UrunBilgisController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202309071319557_mig_musteri_urun.cs" />
+    <Compile Include="Migrations\202309071319557_mig_musteri_urun.Designer.cs">
+      <DependentUpon>202309071319557_mig_musteri_urun.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext\DashboardDbContext.cs" />
+    <Compile Include="Models\Müşteri\MusteriBilgi.cs" />
     <Compile Include="Models\Personel\PersonelBilgileri.cs" />
     <Compile Include="Models\ProjeTakip\PersonelProje.cs" />
+    <Compile Include="Models\Urunler\UrunBilgi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -436,6 +445,19 @@
     <Content Include="Views\PersonelBilgileris\Index.cshtml" />
     <Content Include="Views\PersonelBilgileris\PersonelKart.cshtml" />
     <Content Include="Views\PersonelProje\Index.cshtml" />
+    <Content Include="Views\PersonelProje\Edit.cshtml" />
+    <Content Include="Views\GenelBakis\Index.cshtml" />
+    <Content Include="Views\MusteriBilgis\Create.cshtml" />
+    <Content Include="Views\MusteriBilgis\Delete.cshtml" />
+    <Content Include="Views\MusteriBilgis\Details.cshtml" />
+    <Content Include="Views\MusteriBilgis\Edit.cshtml" />
+    <Content Include="Views\MusteriBilgis\Index.cshtml" />
+    <Content Include="Views\MusteriBilgis\MusteriKart.cshtml" />
+    <Content Include="Views\UrunBilgis\Create.cshtml" />
+    <Content Include="Views\UrunBilgis\Delete.cshtml" />
+    <Content Include="Views\UrunBilgis\Details.cshtml" />
+    <Content Include="Views\UrunBilgis\Edit.cshtml" />
+    <Content Include="Views\UrunBilgis\Index.cshtml" />
     <Content Include="Views\PersonelProje\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -453,6 +475,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202309071319557_mig_musteri_urun.resx">
+      <DependentUpon>202309071319557_mig_musteri_urun.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

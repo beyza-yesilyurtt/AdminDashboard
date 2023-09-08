@@ -14924,6 +14924,7 @@ body {
 
 .menu {
   display: flex;
+  background-color:black;
 }
 .menu .app-brand {
   width: 100%;
@@ -14966,6 +14967,7 @@ body {
 }
 html:not(.layout-menu-fixed) .menu-inner-shadow {
   display: none !important;
+  
 }
 
 .menu-item {
