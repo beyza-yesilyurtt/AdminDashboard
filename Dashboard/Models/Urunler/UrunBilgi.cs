@@ -1,5 +1,6 @@
 ﻿using Dashboard.Models.Müşteri;
 using Dashboard.Models.Personel;
+using Dashboard.Models.Satis;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,11 +12,7 @@ namespace Dashboard.Models.Urunler
 {
     public class UrunBilgi
     {
-        public UrunBilgi()
-        {
-            this.MusteriBilgis = new HashSet<MusteriBilgi>();
-            this.PersonelBilgileris = new HashSet<PersonelBilgileri>();
-        }
+       
         [Key]
         public int UrunBilgiId { get; set; }
 
@@ -30,12 +27,15 @@ namespace Dashboard.Models.Urunler
         public double UrunFiyat { get; set; }
 
         [DisplayName("SATILAN ADET")]
-        public double SatılanAdet{ get; set; }
+        public double ToplamSatılanAdet{ get; set; }
+        public bool durum { get; set; }
+        public List<SatisBilgi> satisBilgi { get; set; }
+        public List<MusteriBilgi> musteriBilgi { get; set; }
 
-       
 
 
-        public virtual ICollection<MusteriBilgi> MusteriBilgis { get; set; }
-        public virtual ICollection<PersonelBilgileri> PersonelBilgileris { get; set; }
+
+
+
     }
 }

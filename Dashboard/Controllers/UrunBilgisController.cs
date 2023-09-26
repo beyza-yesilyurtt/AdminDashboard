@@ -6,11 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Dashboard.Models;
 using Dashboard.Models.DataContext;
 using Dashboard.Models.Urunler;
 
 namespace Dashboard.Controllers
 {
+    [_SessionControl]
     public class UrunBilgisController : Controller
     {
         private DashboardDbContext db = new DashboardDbContext();
@@ -47,7 +49,7 @@ namespace Dashboard.Controllers
         // daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UrunBilgiId,UrunIsim,UrunAciklama,UrunFiyat,SatınAlanMüşteri,İletişimeGecenKisi")] UrunBilgi urunBilgi)
+        public ActionResult Create([Bind(Include = "UrunBilgiId,UrunIsim,UrunAciklama,UrunFiyat,SatılanAdet")] UrunBilgi urunBilgi)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +81,7 @@ namespace Dashboard.Controllers
         // daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UrunBilgiId,UrunIsim,UrunAciklama,UrunFiyat,SatınAlanMüşteri,İletişimeGecenKisi")] UrunBilgi urunBilgi)
+        public ActionResult Edit([Bind(Include = "UrunBilgiId,UrunIsim,UrunAciklama,UrunFiyat,SatılanAdet")] UrunBilgi urunBilgi)
         {
             if (ModelState.IsValid)
             {

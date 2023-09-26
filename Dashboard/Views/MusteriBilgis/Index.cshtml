@@ -24,20 +24,13 @@
                         E-POSTA
                     </th>
 
-                    @*<th>
-            @Html.DisplayNameFor(model => model.Mail)
-        </th>*@
-                    @*<th>
-            @Html.DisplayNameFor(model => model.Sifre)
-        </th> *@
-
                     <th>
                         @Html.DisplayNameFor(model => model.MusteriIsim)
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.MusteriSoyisim)
                     </th>
-                 
+
                     <th>
                         @Html.DisplayNameFor(model => model.MusteriIletisim)
                     </th>
@@ -50,6 +43,10 @@
                         @Html.DisplayNameFor(model => model.SatılanUrun)
                     </th>
 
+                    <th>
+                        @Html.DisplayNameFor(model => model.IletisimeGecenKisi)
+                    </th>
+
 
                 </tr>
             </thead>
@@ -58,35 +55,40 @@
 
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td>
-                            <a href="mailto:@item.MusteriMail">@item.MusteriMail</a>
-                        </td>
-                                           
-                        <td>
-                            @Html.DisplayFor(modelItem => item.MusteriIsim)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.MusteriSoyisim)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.MusteriIletisim)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.SirketIsmi)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.SatılanUrun)
-                        </td>                       
+                <tr>
+                    <td>
+                        <a href="mailto:@item.MusteriMail">@item.MusteriMail</a>
+                    </td>
 
-                        <td>
-                            <a href="/MusteriBilgis/Edit/@item.MusteriBilgiId" class="btn btn-primary"><span class="tf-icons bx bx-edit"></span></a>
-                            <a href="/MusteriBilgis/Details/@item.MusteriBilgiId" class="btn btn-secondary"><span class="tf-icons bx bx-detail"></span></a>
-                            <a href="/MusteriBilgis/Delete/@item.MusteriBilgiId" class="btn btn-danger"><span class="tf-icons bx bx-trash"></span></a>
-                            @* <a href="/PersonelBilgileris/HareketFöyü/@item.PersonelBilgiId" class="btn btn-info"><span class="tf-icons bx bx-history"></span></a> *@
-                        </td>
-                       
-                    </tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MusteriIsim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MusteriSoyisim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MusteriIletisim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SirketIsmi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SatılanUrun)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IletisimeGecenKisi)
+                    </td>
+
+                    <td>
+                        <a href="/MusteriBilgis/Edit/@item.MusteriBilgiId" class="btn btn-primary">
+                        <span class="tf-icons bx bx-edit"></span></a>
+                        <a href="/MusteriBilgis/Details/@item.MusteriBilgiId" class="btn btn-secondary">
+                        <span class="tf-icons bx bx-detail"></span></a>
+                        <a href="/MusteriBilgis/Delete/@item.MusteriBilgiId" class="btn btn-danger">
+                        <span class="tf-icons bx bx-trash"></span></a>
+                      
+
+                </tr>
                 }
 
             </tbody>

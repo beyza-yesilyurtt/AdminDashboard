@@ -88,5 +88,3 @@ C:\Users\Beyza Yeşilyurt\Desktop\Dashboard\Dashboard\obj\Debug\Dashboard.csproj
 C:\Users\Beyza Yeşilyurt\Desktop\Dashboard\Dashboard\obj\Debug\Dashboard.csproj.CopyComplete
 C:\Users\Beyza Yeşilyurt\Desktop\Dashboard\Dashboard\obj\Debug\Dashboard.dll
 C:\Users\Beyza Yeşilyurt\Desktop\Dashboard\Dashboard\obj\Debug\Dashboard.pdb
-C:\Users\Beyza Yeşilyurt\Desktop\Dashboard\Dashboard\obj\Debug\Dashboard.Migrations.mig_musteri_urun.resources
-C:\Users\Beyza Yeşilyurt\Desktop\Dashboard\Dashboard\obj\Debug\Dashboard.csproj.GenerateResource.cache

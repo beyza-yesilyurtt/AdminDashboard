@@ -1,4 +1,6 @@
-﻿using Dashboard.Models.ProjeTakip;
+﻿using Dashboard.Models.Müşteri;
+using Dashboard.Models.ProjeTakip;
+using Dashboard.Models.Satis;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,10 +12,6 @@ namespace Dashboard.Models.Personel
 {
     public class PersonelBilgileri
     {
-        public PersonelBilgileri()
-        {
-            this.PersonelProjes = new HashSet<PersonelProje>();
-        }
 
         [Key]
         public int PersonelBilgiId { get; set; }
@@ -66,9 +64,12 @@ namespace Dashboard.Models.Personel
         public DateTime DogumTarihi { get; set; }
 
         [DisplayName("İŞE BAŞLAMA TARİHİ")]
-        public DateTime IseBaslamaTarihi { get; set; } //işe giriş tarihi
-        public virtual ICollection<PersonelProje> PersonelProjes { get; set; }
-      
+        public DateTime IseBaslamaTarihi { get; set; }
+        public bool durum { get; set; }
+        public List<MusteriBilgi> musteriBilgi { get; set; }
+        public List<SatisBilgi> satisBilgi { get; set; }
+
+
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Dashboard.Models.Müşteri;
 using Dashboard.Models.Personel;
 using Dashboard.Models.ProjeTakip;
+using Dashboard.Models.Satis;
 using Dashboard.Models.Urunler;
 using System;
 using System.Collections.Generic;
@@ -21,8 +22,10 @@ namespace Dashboard.Models.DataContext
             public DbSet<PersonelProje> PersonelProjes { get; set; }
             public DbSet<MusteriBilgi> MusteriBilgis { get; set; }
             public DbSet<UrunBilgi> UrunBilgis { get; set; }
+            public DbSet<SatisBilgi> SatisBilgis { get; set; }
+       
 
     }
 
-    
+
 }

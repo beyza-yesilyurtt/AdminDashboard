@@ -1,4 +1,5 @@
 ﻿using Dashboard.Models.Personel;
+using Dashboard.Models.Satis;
 using Dashboard.Models.Urunler;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,7 @@ namespace Dashboard.Models.Müşteri
 {
     public class MusteriBilgi
     {
-        public MusteriBilgi ()
-        {
-            this.UrunBilgis = new HashSet<UrunBilgi>();
-        }
+
 
         [Key]
         public int MusteriBilgiId { get; set; }
@@ -40,10 +38,15 @@ namespace Dashboard.Models.Müşteri
         public string SatılanUrun { get; set; }
 
         [DisplayName("İLETİŞİME GEÇEN KİŞİ")]
-        public double İletişimeGecenKisi { get; set; }
+        public string IletisimeGecenKisi { get; set; }
+        public List<UrunBilgi> urun {get; set;}
+        public bool durum { get; set; }
+        public int PersonelBilgiId { get; set; }
+        public PersonelBilgileri personelBilgileri { get; set; }
+        public List<UrunBilgi> urunBilgi { get; set; }
+        public List<SatisBilgi> satisBilgi { get; set; }
 
 
-        public virtual ICollection<UrunBilgi> UrunBilgis { get; set; }
-        public virtual ICollection<PersonelBilgileri> PersonelBilgileris { get; set; }
+
     }
 }

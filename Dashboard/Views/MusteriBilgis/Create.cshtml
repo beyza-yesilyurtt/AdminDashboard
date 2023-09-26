@@ -54,13 +54,17 @@
 
                         <div class="mb-3 col-md-6">
                             @Html.LabelFor(model => model.SatılanUrun, htmlAttributes: new { @class = "control-label col-md-6" })
-                            <select name="Satılan" class="form-control" required>
+                            <select name="Satılan Ürün" class="form-control" required>
                                 <option value="Seçiniz">Seçiniz</option>
                                 <option value="YDC">YDC</option>
                                 <option value="Genvizit">Genvizit</option>
                                 <option value="E-Gen">E-Gen</option>
                                 <option value="İs-Gen">İs-Gen</option>
                             </select>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.IletisimeGecenKisi, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <input class="form-control" type="text" name="IletisimeGecenKisi" id="IletisimeGecenKisi" value="">
                         </div>
 
                     </div>

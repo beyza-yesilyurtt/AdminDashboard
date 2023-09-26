@@ -25,11 +25,11 @@
                     </th>
 
                     @*<th>
-                            @Html.DisplayNameFor(model => model.Mail)
-                        </th>*@
+            @Html.DisplayNameFor(model => model.Mail)
+        </th>*@
                     @*<th>
-                            @Html.DisplayNameFor(model => model.Sifre)
-                        </th> *@
+            @Html.DisplayNameFor(model => model.Sifre)
+        </th> *@
                     <th style="color: white;">
                         @Html.DisplayNameFor(model => model.Yetki)
                     </th>
@@ -39,9 +39,7 @@
                     <th style="color: white;">
                         @Html.DisplayNameFor(model => model.Soyisim)
                     </th>
-                    <th style="color: white;">
-                        @Html.DisplayNameFor(model => model.TCND)
-                    </th>
+
                     <th style="color: white;">
                         @Html.DisplayNameFor(model => model.Departman)
                     </th>
@@ -53,58 +51,66 @@
                         @Html.DisplayNameFor(model => model.TelefonNumarası)
                     </th>
 
+                    <th style="color: white;">
+                        @Html.DisplayNameFor(model => model.Aktif)
+                    </th>
+
+
                 </tr>
             </thead>
 
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td>
-                            <a href="mailto:@item.Mail" style="color: white;">@item.Mail</a>
-                        </td>
+                <tr>
+                    <td>
+                        <a href="mailto:@item.Mail" style="color: white;">@item.Mail</a>
+                    </td>
 
-                        <td>
-                            <img src="@item.PersonelResim" style="height: 50px; width: 50px; border-radius: 50%; overflow: hidden;" />
-                        </td>
+                    <td>
+                        <img src="@item.PersonelResim" style="height: 50px; width: 50px; border-radius: 50%; overflow: hidden;" />
+                    </td>
 
-                        @* <td>
-                                @Html.DisplayFor(modelItem => item.Sifre)
-                            </td>*@
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Yetki)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.İsim)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Soyisim)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.TCND)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Departman)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Görev)
-                        </td>
+                    @* <td>
+            @Html.DisplayFor(modelItem => item.Sifre)
+        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Yetki)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.İsim)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Soyisim)
+                    </td>
 
-                        <td>
-                            <a href="telno:@item.TelefonNumarası" style="color: white;">@item.TelefonNumarası</a>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Departman)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Görev)
+                    </td>
 
-                        </td>
+                    <td>
+                        <a href="telno:@item.TelefonNumarası" style="color: white;">@item.TelefonNumarası</a>
 
-                        <td>
-                            <a href="/PersonelBilgileris/Edit/@item.PersonelBilgiId" class="btn btn-primary"><span class="tf-icons bx bx-edit"></span></a>
-                            <a href="/PersonelBilgileris/Details/@item.PersonelBilgiId" class="btn btn-secondary"><span class="tf-icons bx bx-detail"></span></a>
-                            <a href="/PersonelBilgileris/Delete/@item.PersonelBilgiId" class="btn btn-danger"><span class="tf-icons bx bx-trash"></span></a>
-                            @* <a href="/PersonelBilgileris/HareketFöyü/@item.PersonelBilgiId" class="btn btn-info"><span class="tf-icons bx bx-history"></span></a> *@
-                        </td>
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Aktif)
+                    </td>
 
 
+                    <td>
+                        <a href="/PersonelBilgileris/Edit/@item.PersonelBilgiId" class="btn btn-primary"><span class="tf-icons bx bx-edit"></span></a>
+                        <a href="/PersonelBilgileris/Details/@item.PersonelBilgiId" class="btn btn-secondary"><span class="tf-icons bx bx-detail"></span></a>
+                        <a href="/PersonelBilgileris/Delete/@item.PersonelBilgiId" class="btn btn-danger"><span class="tf-icons bx bx-trash"></span></a>
 
-                    </tr>
+                    </td>
+
+
+
+                </tr>
                 }
             </tbody>
         </table>

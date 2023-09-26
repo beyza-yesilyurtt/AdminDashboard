@@ -5,55 +5,46 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Ürün Detayları</h2>
 
-<div>
-    <h4>UrunBilgi</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.UrunIsim)
-        </dt>
+<div class="row">
+    <div class="col-md-12">
 
-        <dd>
-            @Html.DisplayFor(model => model.UrunIsim)
-        </dd>
+        <div class="card mb-4">
+            <h5 class="card-header">Profil Detayları</h5>
+            <!-- Account -->
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UrunAciklama)
-        </dt>
+            <hr class="my-0">
+            <div class="card-body">
+                <form id="formAccountSettings" method="POST" onsubmit="return false">
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <label for="lastName" class="form-label">ÜRÜN İSMİ:</label>
+                            @Model.UrunIsim
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="lastName" class="form-label">ÜRÜN AÇIKLAMASI:</label>
+                            @Model.UrunAciklama
+                        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.UrunAciklama)
-        </dd>
+                        <div class="mb-3 col-md-6">
+                            <label for="lastName" class="form-label">ÜRÜN FİYATI:</label>
+                            @Model.UrunFiyat
+                        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UrunFiyat)
-        </dt>
+                        <div class="mb-3 col-md-6">
+                            <label for="lastName" class="form-label">SATILAN ÜRÜN ADET:</label>
+                            @Model.ToplamSatılanAdet
+                        </div>                     
+                    </div>
+                    <div class="mt-2">
+                        <a href="/UrunBilgis/Index/" type="submit" class="btn btn-primary me-2">Ana Sayfaya Dön</a>
 
-        <dd>
-            @Html.DisplayFor(model => model.UrunFiyat)
-        </dd>
+                    </div>
+                </form>
+            </div>
+  
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SatınAlanMüşteri)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SatınAlanMüşteri)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.İletişimeGecenKisi)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.İletişimeGecenKisi)
-        </dd>
-
-    </dl>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.UrunBilgiId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

@@ -1,4 +1,5 @@
-﻿using Dashboard.Models.DataContext;
+﻿using Dashboard.Models;
+using Dashboard.Models.DataContext;
 using Dashboard.Models.ProjeTakip;
 using System;
 using System.Collections.Generic;
@@ -8,13 +9,14 @@ using System.Web.Mvc;
 
 namespace Dashboard.Controllers
 {
+    [_SessionControl]
     public class PersonelProjeController : Controller
     {
         private DashboardDbContext db = new DashboardDbContext();
         public ActionResult Index()
         {
-            var projeobj = db.PersonelProjes.ToList();
-            return View(projeobj);
+            var projelistele = db.PersonelProjes.ToList();
+            return View(projelistele);
         }
 
         public ActionResult Create()

@@ -94,6 +94,21 @@
                                 <input type="text" id="TelefonNumarası" name="TelefonNumarası" class="form-control">
                             </div>
                         </div>
+
+                        <div class="mb-3 col-md-6">
+                            @Html.LabelFor(model => model.Aktif, htmlAttributes: new { @class = "control-label col-md-6" })
+                            <input class="form-control" type="text" name="TCND" id="TCND" value="">
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+            @Html.LabelFor(model => model.Aktif, htmlAttributes: new { @class = "control-label col-md-6" })
+            <select name="Aktif" class="form-control" required>
+                <option value="Seçiniz">Seçiniz</option>
+                <option value="Aktif">Aktif</option>
+                <option value="Pasif">Pasif</option>
+
+            </select>
+        </div>
                         <div class="mb-3 col-md-6">
                             @Html.LabelFor(model => model.AdresBilgi, htmlAttributes: new { @class = "control-label col-md-6" })
                             <input class="form-control" type="text" name="AdresBilgi" id="AdresBlgi" value="">
@@ -122,10 +137,11 @@
             </div>
             </form>
         </div>
-        <!-- /Account -->
+     
     </div>
     </div>
 }
+
 
     @*<div class="form-group">
                 <div class="col-md-offset-2 col-md-10">

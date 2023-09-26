@@ -6,16 +6,17 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Dashboard.Models;
 using Dashboard.Models.DataContext;
 using Dashboard.Models.Personel;
 
 namespace Dashboard.Controllers
 {
+    [_SessionControl]
     public class PersonelBilgilerisController : Controller
     {
         private DashboardDbContext db = new DashboardDbContext();
-
-       
+               
         public ActionResult Index()
         {
             return View(db.PersonelBilgileris.ToList());
@@ -40,7 +41,7 @@ namespace Dashboard.Controllers
             return View(personelBilgileri);
         }
 
-        // GET: PersonelBilgileris/Create
+        
         public ActionResult Create()
         {
             return View();
@@ -51,7 +52,7 @@ namespace Dashboard.Controllers
         // daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PersonelBilgiId,Mail,Sifre,Yetki,İsim,Soyisim,PersonelResim,TCND,Departman,Görev,PozisyonAcıklama,TelefonNumarası,AdresBilgi,DogumTarihi,IseBaslamaTarihi")] PersonelBilgileri personelBilgileri)
+        public ActionResult Create([Bind(Include = "PersonelBilgiId,Mail,Sifre,Yetki,İsim,Soyisim,PersonelResim,TCND,Departman,Görev,PozisyonAcıklama,TelefonNumarası,AdresBilgi,DogumTarihi,IseBaslamaTarihi,Aktif")] PersonelBilgileri personelBilgileri)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +84,7 @@ namespace Dashboard.Controllers
         // daha fazla bilgi için bkz. https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PersonelBilgiId,Mail,Sifre,Yetki,İsim,Soyisim,PersonelResim,TCND,Departman,Görev,PozisyonAcıklama,TelefonNumarası,AdresBilgi,DogumTarihi,IseBaslamaTarihi")] PersonelBilgileri personelBilgileri)
+        public ActionResult Edit([Bind(Include = "PersonelBilgiId,Mail,Sifre,Yetki,İsim,Soyisim,PersonelResim,TCND,Departman,Görev,PozisyonAcıklama,TelefonNumarası,AdresBilgi,DogumTarihi,IseBaslamaTarihi,Aktif")] PersonelBilgileri personelBilgileri)
         {
             if (ModelState.IsValid)
             {
@@ -93,6 +94,10 @@ namespace Dashboard.Controllers
             }
             return View(personelBilgileri);
         }
+
+    
+
+
 
         //// GET: PersonelBilgileris/Delete/5
         //public ActionResult Delete(int? id)
@@ -142,5 +147,7 @@ namespace Dashboard.Controllers
             }
             base.Dispose(disposing);
         }
+
+       
     }
 }

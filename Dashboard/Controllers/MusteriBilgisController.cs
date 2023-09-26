@@ -11,6 +11,7 @@ using Dashboard.Models.Müşteri;
 
 namespace Dashboard.Controllers
 {
+ 
     public class MusteriBilgisController : Controller
     {
         private DashboardDbContext db = new DashboardDbContext();
@@ -48,7 +49,7 @@ namespace Dashboard.Controllers
       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MusteriBilgiId,MusteriIsim,MusteriSoyisim,MusteriMail,MusteriIletisim,SirketIsmi")] MusteriBilgi musteriBilgi)
+        public ActionResult Create([Bind(Include = "MusteriBilgiId,MusteriIsim,MusteriSoyisim,MusteriMail,MusteriIletisim,SirketIsmi, SatılanUrun, IletisimeGecenKisi")] MusteriBilgi musteriBilgi)
         {
             if (ModelState.IsValid)
             {
@@ -77,7 +78,7 @@ namespace Dashboard.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MusteriBilgiId,MusteriIsim,MusteriSoyisim,MusteriMail,MusteriIletisim,SirketIsmi")] MusteriBilgi musteriBilgi)
+        public ActionResult Edit([Bind(Include = "MusteriBilgiId,MusteriIsim,MusteriSoyisim,MusteriMail,MusteriIletisim,SirketIsmi, SatılanUrun, IletisimeGecenKisi")] MusteriBilgi musteriBilgi)
         {
             if (ModelState.IsValid)
             {

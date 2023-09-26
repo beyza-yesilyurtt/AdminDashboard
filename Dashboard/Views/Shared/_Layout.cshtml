@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    ViewBag.Title = "Some Action";
+}
+
+<!DOCTYPE html>
 <html lang="en"
       class="light-style layout-menu-fixed"
       dir="ltr"
@@ -54,84 +59,45 @@
         <div class="layout-container">
             <!-- Menu -->
 
-            <aside id="layout-menu"  class="layout-menu menu-vertical menu" style="background-color: #34465c; color: white; ">
+            <aside id="layout-menu" class="layout-menu menu-vertical menu" 
+                   style="background-color: #34465c; color: white; ">
                 <div class="app-brand demo">
                     <a href="index.html" class="app-brand-link">
                         <span class="app-brand-logo demo">
 
 
-                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                                 width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
-                                 preserveAspectRatio="xMidYMid meet">
-                                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                                   fill="#000000" stroke="none">
-                                    <path d="M220 3979 c-36 -4 -80 -11 -98 -14 l-32 -6 2 -1492 3 -1492 50 -7
-            c108 -16 355 -27 445 -19 83 7 108 14 200 56 329 151 601 389 898 785 64 85
-            136 181 160 212 24 32 40 58 35 58 -4 0 -39 -27 -76 -60 -282 -248 -569 -392
-            -883 -445 -54 -9 -126 -15 -159 -13 l-60 3 0 920 0 920 94 -2 c297 -8 625
-            -129 897 -330 121 -90 324 -295 418 -421 42 -57 76 -108 76 -113 0 -29 38 8
-            132 126 57 72 136 170 177 218 86 102 91 80 -50 234 -459 501 -1022 798 -1669
-            878 -133 16 -446 19 -560 4z" />
-                                    <path d="M4455 3980 c-77 -9 -180 -46 -320 -117 -306 -154 -610 -429 -906
-            -818 -85 -112 -279 -395 -279 -407 0 -4 17 11 37 34 74 86 230 241 303 302
-            307 257 685 414 1099 457 185 19 513 0 634 -37 16 -5 17 13 17 279 l0 285 -42
-            6 c-161 24 -401 31 -543 16z" />
-                                    <path d="M3637 2743 c-4 -3 -7 -132 -7 -285 l0 -278 405 0 405 0 -2 -317 -3
-            -318 -55 -3 c-90 -5 -271 16 -392 47 -315 80 -603 272 -831 556 -93 116 -170
-            231 -222 336 l-37 73 -22 -27 c-12 -15 -53 -78 -91 -140 -37 -61 -104 -170
-            -147 -241 -43 -71 -77 -134 -75 -140 8 -19 197 -227 282 -309 475 -465 1072
-            -727 1730 -762 110 -6 323 5 424 21 l41 7 0 887 c0 792 -2 889 -15 894 -22 8
-            -1380 7 -1388 -1z" />
-                                </g>
 
-
-
-
-                                @** <svg width="25"
-                                     viewBox="0 0 25 42"
-                                     version="1.1"
-                                     xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <defs>
-                                        <path d="M13.7918663,0.358365126 L3.39788168,7.44174259 C0.566865006,9.69408886 -0.379795268,12.4788597 0.557900856,15.7960551 C0.68998853,16.2305145 1.09562888,17.7872135 3.12357076,19.2293357 C3.8146334,19.7207684 5.32369333,20.3834223 7.65075054,21.2172976 L7.59773219,21.2525164 L2.63468769,24.5493413 C0.445452254,26.3002124 0.0884951797,28.5083815 1.56381646,31.1738486 C2.83770406,32.8170431 5.20850219,33.2640127 7.09180128,32.5391577 C8.347334,32.0559211 11.4559176,30.0011079 16.4175519,26.3747182 C18.0338572,24.4997857 18.6973423,22.4544883 18.4080071,20.2388261 C17.963753,17.5346866 16.1776345,15.5799961 13.0496516,14.3747546 L10.9194936,13.4715819 L18.6192054,7.984237 L13.7918663,0.358365126 Z"
-                                              id="path-1"></path>
-                                        <path d="M5.47320593,6.00457225 C4.05321814,8.216144 4.36334763,10.0722806 6.40359441,11.5729822 C8.61520715,12.571656 10.0999176,13.2171421 10.8577257,13.5094407 L15.5088241,14.433041 L18.6192054,7.984237 C15.5364148,3.11535317 13.9273018,0.573395879 13.7918663,0.358365126 C13.5790555,0.511491653 10.8061687,2.3935607 5.47320593,6.00457225 Z"
-                                              id="path-3"></path>
-                                        <path d="M7.50063644,21.2294429 L12.3234468,23.3159332 C14.1688022,24.7579751 14.397098,26.4880487 13.008334,28.506154 C11.6195701,30.5242593 10.3099883,31.790241 9.07958868,32.3040991 C5.78142938,33.4346997 4.13234973,34 4.13234973,34 C4.13234973,34 2.75489982,33.0538207 2.37032616e-14,31.1614621 C-0.55822714,27.8186216 -0.55822714,26.0572515 -4.05231404e-15,25.8773518 C0.83734071,25.6075023 2.77988457,22.8248993 3.3049379,22.52991 C3.65497346,22.3332504 5.05353963,21.8997614 7.50063644,21.2294429 Z"
-                                              id="path-4"></path>
-                                        <path d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L17.4,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z"
-                                              id="path-5"></path>
-                                    </defs>  *@
-                                <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
-                                        <g id="Icon" transform="translate(27.000000, 15.000000)">
-                                            <g id="Mask" transform="translate(0.000000, 8.000000)">
-                                                <mask id="mask-2" fill="white">
-                                                    <use xlink:href="#path-1"></use>
-                                                </mask>
-                                                <use fill="#696cff" xlink:href="#path-1"></use>
-                                                <g id="Path-3" mask="url(#mask-2)">
-                                                    <use fill="#696cff" xlink:href="#path-3"></use>
-                                                    <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
-                                                </g>
-                                                <g id="Path-4" mask="url(#mask-2)">
-                                                    <use fill="#696cff" xlink:href="#path-4"></use>
-                                                    <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
-                                                </g>
+                            <img src="https://dijitalgen.com/wp-content/uploads/2021/09/Dijital-Gen-512x512-newlogo_blue.png"
+                                 jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="max-width: 50px;
+                                  height: 50px; margin: 0px; width: 50px;"
+                                 alt=""
+                                 jsname="kn3ccd" aria-hidden="false">
+                            <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
+                                    <g id="Icon" transform="translate(27.000000, 15.000000)">
+                                        <g id="Mask" transform="translate(0.000000, 8.000000)">
+                                            <mask id="mask-2" fill="white">
+                                                <use xlink:href="#path-1"></use>
+                                            </mask>
+                                            <use fill="#696cff" xlink:href="#path-1"></use>
+                                            <g id="Path-3" mask="url(#mask-2)">
+                                                <use fill="#696cff" xlink:href="#path-3"></use>
+                                                <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
                                             </g>
-                                            <g id="Triangle"
-                                               transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) ">
-                                                <use fill="#696cff" xlink:href="#path-5"></use>
-                                                <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
+                                            <g id="Path-4" mask="url(#mask-2)">
+                                                <use fill="#696cff" xlink:href="#path-4"></use>
+                                                <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
                                             </g>
+                                        </g>
+                                        <g id="Triangle"
+                                           transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) ">
+                                            <use fill="#696cff" xlink:href="#path-5"></use>
+                                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
                                         </g>
                                     </g>
                                 </g>
-                            </svg>
-                        </span>
-
-                        @* <span class="app-brand-text demo menu-text fw-bolder ms-2">DijitalGen</span> *@
-
+                            </g>
+                        </span>                 
                         <span class="app-brand-text demo menu-text fw-bolder ms-2">
                             <span class="capitalize">Dijital</span>
                             <span class="capitalize">Gen</span>
@@ -139,8 +105,7 @@
 
                         <style>
                             .capitalize {
-                             
-                                color:lightskyblue;
+                                color: #7ac9f0;
                             }
                         </style>
 
@@ -154,7 +119,10 @@
                 <div class="menu-inner-shadow"></div>
 
                 <ul class="menu-inner py-1">
+
                     <!-- Dashboard -->
+
+
                     <li class="menu-item active">
                         <a href="/GenelBakis/Index/" class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
@@ -170,9 +138,11 @@
                         </a>
                     </li>
 
-                    <li class="menu-header small text-uppercase">
-                        <span class="menu-header-text">Personeller</span>
+                    <li class="menu-header text-middle text-uppercase">
+                        <span class="menu-header-text" style="color: #7ac9f0;">Personeller</span>
                     </li>
+
+
                     <li class="menu-item">
                         <a href="/PersonelBilgileris/Index/" class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-dock-top"></i>
@@ -181,11 +151,12 @@
 
                     </li>
                     <li class="menu-item">
-                        <a href="/PersonelBilgileris/Create/" class="menu-link" style="color:white;" >
+                        <a href="/PersonelBilgileris/Create/" class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
                             <div data-i18n="Authentications">Personel Ekle</div>
                         </a>
                     </li>
+
                     <li class="menu-item">
                         <a href="/PersonelBilgileris/PersonelKart/" class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-cube-alt"></i>
@@ -194,15 +165,8 @@
 
                     </li>
 
-                    @*<li class="menu-item">
-            <a href="cards-basic.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Personel Hareketleri</div>
-            </a>
-        </li>*@
-
                     <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">PROJELER</span></li>
+                    <li class="menu-header text-middle text-uppercase"><span class="menu-header-text" style="color: #7ac9f0;">PROJELER</span></li>
                     <!-- Cards -->
                     <!-- User interface -->
                     <li class="menu-item">
@@ -222,7 +186,7 @@
 
                     </li>
 
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">ÜRÜNLER</span></li>
+                    <li class="menu-header text-middle text-uppercase"><span class="menu-header-text" style="color: #7ac9f0;">ÜRÜNLER</span></li>
                     <li class="menu-item">
                         <a href="/UrunBilgis/Index/" class="menu-link" style="color:white;">
                             <i class="menu-icon tf-icons bx bx-dock-top"></i>
@@ -238,7 +202,7 @@
                         </a>
 
                     </li>
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">MÜŞTERİLER</span></li>
+                    <li class="menu-header text-middle text-uppercase"><span class="menu-header-text" style="color: #7ac9f0;">MÜŞTERİLER</span></li>
 
                     <li class="menu-item">
                         <a href="/MusteriBilgis/Index/" class="menu-link" style="color:white;">
@@ -262,8 +226,33 @@
                         </a>
                     </li>
 
+                    <li class="menu-header text-middle text-uppercase"><span class="menu-header-text" style="color: #7ac9f0;">SATIŞLAR</span></li>
+
+                    <li class="menu-item">
+                        <a href="/SatisBilgis/Create/" class="menu-link" style="color:white;">
+                            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                            <div data-i18n="Account Settings">Satış Oluştur</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="/Satis/Index/" class="menu-link" style="color:white;">
+                            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                            <div data-i18n="Account Settings">Satış Durum</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="/SatisBilgis/Liste/" class="menu-link" style="color:white;">
+                            <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                            <div data-i18n="Account Settings">Tamamlanan Satışlar</div>
+                        </a>
+                    </li>
+
+
+
                     <!-- Forms & Tables -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">RAPORLAMALAR</span></li>
+                    <li class="menu-header text-middle text-uppercase"><span class="menu-header-text" style="color: #7ac9f0;">RAPORLAMALAR</span></li>
                     <!-- Forms -->
                     <li class="menu-item">
                         <a href="javascript:void(0);" class="menu-link menu-toggle" style="color:white;">
@@ -291,7 +280,7 @@
                     </li>
 
                     <!-- Misc -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">DESTEK</span></li>
+                    <li class="menu-header text-middle text-uppercase"><span class="menu-header-text" style="color: #7ac9f0;">DESTEK</span></li>
                     <li class="menu-item">
                         <a href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
                            target="_blank"
@@ -300,6 +289,8 @@
                             <div data-i18n="Support">Canlı Destek</div>
                         </a>
                     </li>
+
+
 
                 </ul>
             </aside>
@@ -335,7 +326,7 @@
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        <img src="~/sneat-bootstrap-html-admin-template/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                        <img src="~/sneat-bootstrap-html-admin-template/assets/img/avatars/1.png" alt="" ; class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
@@ -344,12 +335,17 @@
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div class="avatar avatar-online">
-                                                        <img src="~/sneat-bootstrap-html-admin-template/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                                        <img src="~/sneat-bootstrap-html-admin-template/assets/img/avatars/1.png" alt="" ; class="w-px-40 h-auto rounded-circle" />
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
-                                                    <span class="fw-semibold d-block">Ad Soayd</span>
-                                                    <small class="text-muted">Pozisyon</small>
+                                                    <span class="fw-semibold d-block">
+
+                                                    </span>
+
+                                                    <small class="text-muted">
+
+                                                    </small>
                                                 </div>
                                             </div>
                                         </a>
@@ -361,6 +357,15 @@
                                         <a class="dropdown-item" href="#">
                                             <i class="bx bx-user me-2"></i>
                                             <span class="align-middle">Profilim</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item">
+                                            <i class="bx bx-user me-2"></i>
+                                            <span class="align-middle">
+                                            AD SOYAD
+                                            </span>
                                         </a>
                                     </li>
 
@@ -377,9 +382,11 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="auth-login-basic.html">
+                                        <a class="dropdown-item" href="~/Login/Index">
                                             <i class="bx bx-power-off me-2"></i>
-                                            <span class="align-middle">Çıkış Yap</span>
+                                            <span class="align-middle">
+                                                Çıkış Yap
+                                            </span>
                                         </a>
                                     </li>
                                 </ul>
